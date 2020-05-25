@@ -5,8 +5,10 @@
 
 if (command -v wkhtmltopdf)
 then
-	echo "Enter HTML file name without extension. (example)"
-	echo "If file is not in same folder then specify full path."
+	bold=$(tput bold)
+	normal=$(tput sgr0)
+	echo "Enter HTML file name ${bold}without extension${normal}. (example.html --> example)"
+	echo "If file is not in same folder then specify full path. (/home/user/html/example)"
 	read filename
 	file="${filename}.html"
 	out="${filename}.pdf"
